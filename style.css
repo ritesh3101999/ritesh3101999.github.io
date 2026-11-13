@@ -67,6 +67,21 @@ button { font: inherit; }
     min-height: min(720px, calc(100vh - 76px));
     text-align: center; padding-top: 5rem; padding-bottom: 4rem;
 }
+.profile-photo {
+    display: block;
+    width: 156px;
+    height: 156px;
+    margin: 0 auto 1.5rem;
+    border: 3px solid rgba(112, 225, 193, 0.68);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 22%;
+    background: var(--surface);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.3),
+        0 0 0 8px rgba(112, 225, 193, 0.06),
+        0 0 28px rgba(112, 225, 193, 0.12);
+}
 .eyebrow {
     margin: 0 0 1rem; color: var(--accent);
     font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
@@ -204,6 +219,7 @@ button { font: inherit; }
     .nav-links.is-open { display: flex; }
     .nav-links a { display: block; padding: 0.8rem 0.25rem; }
     .hero { min-height: 620px; }
+    .profile-photo { width: 136px; height: 136px; margin: 0 auto 1.25rem; }
     .skills-container, .project-grid, .education-card { grid-template-columns: 1fr; }
     .content-section { padding: 4rem 0; }
     .education-card { padding: 1.5rem; }
