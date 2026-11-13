@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ritesh Kumar is a Computer Science graduate focused on Java, Spring Boot, Python, and building practical software projects.">
+    <meta name="theme-color" content="#0b1020">
+    <meta property="og:title" content="Ritesh Kumar | Software Developer">
+    <meta property="og:description" content="Java and Spring Boot focused developer, Python programmer, and Computer Science graduate.">
+    <meta property="og:type" content="website">
     <title>Ritesh Kumar | Software Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Ritesh.</div>
-        <ul class="nav-links">
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#about" aria-label="Ritesh Kumar, home">Ritesh<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -18,118 +25,109 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="about" class="hero">
-        <h1>Hi, I'm Ritesh Kumar</h1>
-        <p>A B.Tech Computer Science graduate from Siksha 'O' Anusandhan (ITER) and an aspiring Software Developer / Engineer. I am a fresher proficient in Java, Spring Boot, and MySQL, passionate about building secure, data-driven applications.</p>
-        <div class="status-badge">Currently mastering advanced software development at <strong>Bosscoder Academy</strong></div>
-        <a href="#projects" class="btn">View My Work</a>
-    </header>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="tech-stack">
-                    <span>Java</span>
-                    <span>Python</span>
-                    <span>C</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                </div>
+    <main>
+        <header id="about" class="hero section-shell">
+            <p class="eyebrow">Computer Science Graduate <span aria-hidden="true">·</span> Software Developer</p>
+            <h1>Hi, I'm <span>Ritesh Kumar.</span></h1>
+            <p class="hero-copy">I focus on Java and Spring Boot, and enjoy building practical applications backed by databases. I also work with Python for programming and data structures practice, while continuing to strengthen my frontend fundamentals.</p>
+            <div class="status-badge"><span class="status-dot" aria-hidden="true"></span> Continuing my software development learning journey at <strong>Bosscoder Academy</strong></div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">Explore my projects <span aria-hidden="true">→</span></a>
+                <a href="mailto:ritesh3101999@gmail.com" class="btn outline">Get in touch</a>
             </div>
-            <div class="skill-category">
-                <h3>Frameworks</h3>
-                <div class="tech-stack">
-                    <span>Spring Boot</span>
-                    <span>Spring MVC</span>
-                    <span>Spring Data JPA</span>
-                    <span>Spring Security</span>
-                    <span>Hibernate</span>
-                    <span>Thymeleaf</span>
-                    <span>Java Swing</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Databases</h3>
-                <div class="tech-stack">
-                    <span>MySQL</span>
-                    <span>PostgreSQL</span>
-                    <span>JDBC</span>
-                    <span>Git & GitHub</span>
-                    <span>Maven</span>
-                    <span>Postman</span>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a class="scroll-hint" href="#skills">Scroll to explore <span aria-hidden="true">↓</span></a>
+        </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>EarnLearn Platform</h3>
-                <p>A full-stack platform empowering artisans to sell products alongside an integrated Learning Management System. Configured robust Spring Security protocols (RBAC, CSRF) and engineered reliable transactional data flows using Spring Data JPA.</p>
-                <div class="tech-stack">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>MySQL</span>
-                    <span>Thymeleaf</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/ritesh3101999/earnlearn" target="_blank" class="project-link">View Code &rarr;</a>
-                </div>
+        <section id="skills" class="content-section section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">What I work with</p>
+                <h2>Skills &amp; Tools</h2>
+                <p>Technologies I have used in projects and areas I am actively learning.</p>
             </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>E-Learning System</h3>
-                <p>A full-stack Management System for structured course administration, lesson publishing, and student enrollment. Implemented Spring Security with BCrypt encryption and managed relational schemas efficiently.</p>
-                <div class="tech-stack">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>MySQL</span>
-                    <span>Maven</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/ritesh3101999/elearning-project" target="_blank" class="project-link">View Code &rarr;</a>
-                </div>
+            <div class="skills-container">
+                <article class="skill-category">
+                    <span class="card-index">01</span>
+                    <h3>Programming</h3>
+                    <div class="tech-stack"><span>Java</span><span>Python</span><span>C</span><span>SQL</span></div>
+                </article>
+                <article class="skill-category">
+                    <span class="card-index">02</span>
+                    <h3>Java &amp; Backend</h3>
+                    <div class="tech-stack"><span>Spring Boot</span><span>Spring MVC</span><span>Spring Security</span><span>Spring Data JPA</span><span>Hibernate</span><span>JDBC</span><span>Thymeleaf</span></div>
+                </article>
+                <article class="skill-category">
+                    <span class="card-index">03</span>
+                    <h3>Databases &amp; Tools</h3>
+                    <div class="tech-stack"><span>MySQL</span><span>PostgreSQL</span><span>Git &amp; GitHub</span><span>Maven</span><span>Postman</span></div>
+                </article>
+                <article class="skill-category">
+                    <span class="card-index">04</span>
+                    <h3>Web Fundamentals</h3>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JavaScript fundamentals</span><span>React fundamentals</span></div>
+                    <p class="skill-note">Currently building my frontend foundations.</p>
+                </article>
             </div>
+        </section>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>Student Information System</h3>
-                <p>A desktop-based management system providing an interactive GUI to perform full CRUD operations for student records. Implemented robust database connectivity leveraging JDBC and MySQL for secure, real-time data retrieval.</p>
-                <div class="tech-stack">
-                    <span>Java</span>
-                    <span>Java Swing</span>
-                    <span>JDBC</span>
-                    <span>MySQL</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/ritesh3101999/student-management-system" target="_blank" class="project-link">View Code &rarr;</a>
-                </div>
+        <section id="projects" class="content-section projects-section section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">Selected work</p>
+                <h2>Projects I've built</h2>
+                <p>A few applications and practice projects from my software development journey.</p>
             </div>
+            <div class="project-grid">
+                <article class="project-card project-featured">
+                    <div class="project-topline"><span class="project-type">Full-stack web application</span><span class="project-number">01</span></div>
+                    <h3>EarnLearn Platform</h3>
+                    <p>A learning and handmade-products platform combining course management, live learning features, and a marketplace. The project includes role-based access for administrators, instructors, sellers, and students.</p>
+                    <div class="tech-stack"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>MySQL</span><span>Thymeleaf</span></div>
+                    <a href="https://github.com/ritesh3101999/earnlearn" target="_blank" rel="noopener noreferrer" class="project-link">Explore repository <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Full-stack web application</span><span class="project-number">02</span></div>
+                    <h3>E-Learning System</h3>
+                    <p>A course management application for course administration, lesson publishing, and student enrollment, with role-based access and secure authentication.</p>
+                    <div class="tech-stack"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Maven</span></div>
+                    <a href="https://github.com/ritesh3101999/elearning-project" target="_blank" rel="noopener noreferrer" class="project-link">Explore repository <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Desktop application</span><span class="project-number">03</span></div>
+                    <h3>Student Management System</h3>
+                    <p>A Java Swing application for managing student records, attendance, and performance reports, connected to MySQL through JDBC.</p>
+                    <div class="tech-stack"><span>Java</span><span>Java Swing</span><span>JDBC</span><span>MySQL</span></div>
+                    <a href="https://github.com/ritesh3101999/student-management-system" target="_blank" rel="noopener noreferrer" class="project-link">Explore repository <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Learning &amp; practice</span><span class="project-number">04</span></div>
+                    <h3>Java &amp; Python DSA</h3>
+                    <p>A collection of data structures and algorithm practice in Java and Python, supporting my ongoing problem-solving and programming practice.</p>
+                    <div class="tech-stack"><span>Java</span><span>Python</span><span>Data Structures</span><span>Algorithms</span></div>
+                    <a href="https://github.com/ritesh3101999/java-python-dsa" target="_blank" rel="noopener noreferrer" class="project-link">Explore repository <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="education-section section-shell" aria-labelledby="education-title">
+            <div class="education-card">
+                <div><p class="eyebrow">Background</p><h2 id="education-title">Education &amp; growth</h2></div>
+                <div class="education-detail"><h3>B.Tech in Computer Science</h3><p>Siksha 'O' Anusandhan (ITER)</p><p class="muted">Continuing to deepen my software development skills at Bosscoder Academy.</p></div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer / Contact -->
-    <footer id="contact">
-        <h2>Let's Connect</h2>
-        <p>I am actively looking for software development roles and ready to contribute to a great team.</p>
-        <div class="social-links">
-            <a href="mailto:ritesh3101999@gmail.com" class="btn">Email Me</a>
-            <a href="https://www.linkedin.com/in/ritesh-kumar-a43272337/" target="_blank" class="btn outline">LinkedIn</a>
-            <a href="https://github.com/ritesh3101999" target="_blank" class="btn outline">GitHub</a>
+    <footer id="contact" class="contact-section">
+        <div class="section-shell contact-inner">
+            <p class="eyebrow">Have an opportunity or idea?</p>
+            <h2>Let's connect.</h2>
+            <p>I’m looking for opportunities to grow as a software developer and contribute to a collaborative team.</p>
+            <div class="social-links">
+                <a href="mailto:ritesh3101999@gmail.com" class="btn">Email me <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/ritesh-kumar-a43272337/" target="_blank" rel="noopener noreferrer" class="btn outline">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/ritesh3101999" target="_blank" rel="noopener noreferrer" class="btn outline">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="copyright">© <span id="current-year">2026</span> Ritesh Kumar</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

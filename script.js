@@ -1,21 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all navigation links that point to a section on the page
-    const links = document.querySelectorAll('a[href^="#"]');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('#nav-links');
+    const year = document.querySelector('#current-year');
 
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent standard jump
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-            if (targetElement) {
-                // Smoothly scroll down, compensating for the fixed navbar height
-                window.scrollTo({
-                    top: targetElement.offsetTop - 75, 
-                    behavior: 'smooth'
-                });
-            }
-        });
+    if (!menuToggle || !navLinks) {
+        return;
+    }
+
+    const closeMenu = () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        navLinks.classList.remove('is-open');
+    };
+
+    menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+        navLinks.classList.toggle('is-open', !isExpanded);
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMenu();
+            menuToggle.focus();
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            closeMenu();
+        }
     });
 });
